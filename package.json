@@ -4,11 +4,17 @@
   "description": "",
   "main": "main.js",
   "scripts": {
+    "start": "node main.js",
+    "swagger-autogen": "node ./src/config/swagger.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "MRoose",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "swagger-autogen": "^2.23.1",
+    "swagger-ui-express": "^4.6.2",
+    "sequelize": "^6.29.3",
+    "sqlite3": "^5.1.6"
   }
 }
