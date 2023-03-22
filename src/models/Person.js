@@ -1,5 +1,4 @@
-import { Sequelize, DataTypes, Model } from 'sequelize';
-const sequelize = new Sequelize('sqlite::memory:');
+import { DataTypes, Model } from 'sequelize';
 
 class Person extends Model { }
 
@@ -14,4 +13,4 @@ Person.init({
     age: DataTypes.INTEGER
 });
 
-await sequelize.sync();
+module.exports.Person = Person
