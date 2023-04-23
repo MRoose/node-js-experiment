@@ -13,7 +13,10 @@
   "paths": {
     "/persons/api/v1/persons": {
       "get": {
-        "description": "",
+        "tags": [
+          "person"
+        ],
+        "description": "Desc",
         "parameters": [],
         "responses": {
           "200": {
@@ -22,14 +25,30 @@
         }
       },
       "post": {
-        "description": "",
+        "tags": [
+          "person"
+        ],
+        "description": "Desc",
         "parameters": [],
-        "responses": {}
+        "responses": {},
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/Person"
+              }
+            }
+          }
+        }
       }
     },
     "/persons/api/v1/persons/{id}": {
       "get": {
-        "description": "",
+        "tags": [
+          "person"
+        ],
+        "description": "Desc",
         "parameters": [
           {
             "name": "id",
@@ -38,10 +57,24 @@
             "type": "string"
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Some description... OpenAPI 3.x",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/definitions/Person"
+                }
+              }
+            }
+          }
+        }
       },
       "put": {
-        "description": "",
+        "tags": [
+          "person"
+        ],
+        "description": "Desc",
         "parameters": [
           {
             "name": "id",
@@ -53,7 +86,10 @@
         "responses": {}
       },
       "delete": {
-        "description": "",
+        "tags": [
+          "person"
+        ],
+        "description": "Desc",
         "parameters": [
           {
             "name": "id",
